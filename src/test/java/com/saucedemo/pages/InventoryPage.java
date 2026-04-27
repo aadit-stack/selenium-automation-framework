@@ -15,6 +15,12 @@ public class InventoryPage {
     @FindBy(className = "inventory_list")
     private WebElement inventoryList;
 
+    @FindBy(id = "add-to-cart-sauce-labs-backpack")
+    private WebElement addBackpackToCart;
+
+    @FindBy(className = "shopping_cart_link")
+    private WebElement cartIcon;
+
     public InventoryPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -26,5 +32,13 @@ public class InventoryPage {
 
     public boolean isInventoryListDisplayed() {
         return inventoryList.isDisplayed();
+    }
+
+    public void addBackpackToCart() {
+        addBackpackToCart.click();
+    }
+
+    public void goToCart() {
+        cartIcon.click();
     }
 }

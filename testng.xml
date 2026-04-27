@@ -6,4 +6,9 @@
             <class name="com.saucedemo.tests.LoginTest"/>
         </classes>
     </test>
+    <test name="Cart and Checkout Tests">
+        <classes>
+            <class name="com.saucedemo.tests.CartAndCheckoutTest"/>
+        </classes>
+    </test>
 </suite>
